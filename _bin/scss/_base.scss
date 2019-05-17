@@ -1,0 +1,128 @@
+@charset "UTF-8";
+
+/*
+========================================================================================================================
+== Common Styles
+========================================================================================================================
+*/
+body {
+	font-family: "Sawarabi Gothic", sans‐serif;
+	background-color: #fff;
+}
+/* --- @media
+================================================ Smart Phone
+*/
+@media screen and (max-width: 767px) {
+	body {
+		font-size: 1.4rem;
+		line-height: 1.86;
+	}
+	.View--PC {
+		display: none!important;
+	}
+}
+/*
+================================================ PC
+*/
+@media print, screen and (min-width: 768px) {
+	body {
+		font-size: 1.6rem;
+		line-height: 1.6;
+	}
+	.View--SP {
+		display: none!important;
+	}
+}
+/*
+================================================ Tablet
+*/
+@media screen and (min-width: 768px) and (max-width: 930px) {}
+
+
+a:link,
+a:visited {
+	color: #086BDF;
+}
+a:active,
+a:hover {
+	color: #00ACFF;
+}
+
+/*
+========================================================================================================================
+== Public Styles
+========================================================================================================================
+*/
+
+/* Bug Fix ? */
+img[src$=".svg"] {
+	width: 100%;
+}
+
+.Figure img {
+	vertical-align: bottom;
+}
+
+/* === Use RollOver === */
+.RollOver {
+	-webkit-transition: opacity 0.3s;
+	transition: opacity 0.3s;
+}
+.RollOver:hover,
+.RollOver:active {
+	opacity: 0.6;
+}
+
+a > img {
+	transition: opacity .3s;
+}
+a > img:hover,
+a > img:active {
+	opacity: 0.6;
+}
+
+/* === Use State Change === */
+.State--On {}
+.State--Active {}
+.State--Off {}
+.State--Open {}
+.State--Close {}
+.State--New {}
+.State--On > a:active,
+.State--On > a:hover { text-decoration: none; }
+
+.Has--Child {}
+
+/* === Position States === */
+.Align--Right {
+	text-align: right;
+}
+.Align--Center {
+	text-align: center;
+}
+.Align--Left {
+	text-align: left;
+}
+
+/* Size Option */
+.Size--Half {
+	width: 50%;
+}
+.Size--Third {
+	width: 33%;
+}
+.Size--Quarter {
+	width: 25%;
+}
+
+/* Others */
+.Notes {
+	font-weight: bold;
+	color: #459004;
+}
+.Caution {
+	color: #D0011B;
+}
+.Annotation {
+	color: #999;
+}

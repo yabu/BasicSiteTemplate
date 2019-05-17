@@ -1,0 +1,35 @@
+<%
+var file = filename.replace(/\\/g,'/');
+var absolutePath = file.split(site.rootDir)[file.split(site.rootDir).length -1].replace('.ejs','.html');
+var relativePath = '../'.repeat([absolutePath.split('/').length -1]);
+var filePath = '';
+-%><!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<title></title>
+<%- include(relativePath + '_include/_head.ejs', {Path:filePath}); %>
+<%- include(relativePath + '_include/_gtm.ejs', {Path:filePath}); %>
+</head>
+
+<body>
+<div id="Wrapper">
+<%- include(relativePath + '_include/_header.ejs', {Path:filePath}); %>
+
+<section>
+    <h1></h1>
+</section>
+
+<%- include(relativePath + '_include/_footernavi.ejs', {Path:filePath}); %>
+<%- include(relativePath + '_include/_footer.ejs', {Path:filePath}); %>
+</div><!-- #Wrapper -->
+<script src="/cmn/js/jquery-3.4.1.min.js"></script>
+<script src="/cmn/js/scripts.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+	});
+</script>
+</body>
+</html>
